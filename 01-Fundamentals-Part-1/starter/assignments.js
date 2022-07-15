@@ -20,17 +20,25 @@ const language = 'french';
 // const description = country + ' is in '  + continent + ', and its ' + population + ' million people speak ' + language;
 // console.log(description);
 
-// const markHeight = 1.88;
-// const johnHeight = 1.76;
-// const markWeight = 95;
-// const johnWeight = 85;
+// const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+// console.log(description);
 
-// const markBMI = markWeight / markHeight ** 2;
-// const johnBMI = johnWeight / johnHeight ** 2;
+const markHeight = 1.88;
+const johnHeight = 1.76;
+const markWeight = 95;
+const johnWeight = 85;
 
-// const markHigherBMI = markBMI > johnBMI;
+const markBMI = markWeight / markHeight ** 2;
+const johnBMI = johnWeight / johnHeight ** 2;
 
-// console.log(markHigherBMI);
+const markHigherBMI = markBMI > johnBMI;
 
-const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
-console.log(description);
+if (markHigherBMI) {
+  console.log(`Mark's BMI is higher than John's!. Mark's
+  BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+} else {
+  console.log(`Johns's BMI is higher than Marks's!. John's
+  BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
+}
+
+console.log(markHigherBMI);
