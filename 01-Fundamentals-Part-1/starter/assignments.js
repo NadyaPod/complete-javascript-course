@@ -20,14 +20,17 @@ const language = 'french';
 // const description = country + ' is in '  + continent + ', and its ' + population + ' million people speak ' + language;
 // console.log(description);
 
-const markHeight = 1.88;
-const johnHeight = 1.76;
-const markWeight = 95;
-const johnWeight = 85;
+// const markHeight = 1.88;
+// const johnHeight = 1.76;
+// const markWeight = 95;
+// const johnWeight = 85;
 
-const markBMI = markWeight / markHeight ** 2;
-const johnBMI = johnWeight / johnHeight ** 2;
+// const markBMI = markWeight / markHeight ** 2;
+// const johnBMI = johnWeight / johnHeight ** 2;
 
-const markHigherBMI = markBMI > johnBMI;
+// const markHigherBMI = markBMI > johnBMI;
 
-console.log(markHigherBMI);
+// console.log(markHigherBMI);
+
+const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+console.log(description);
