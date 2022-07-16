@@ -23,22 +23,38 @@ const language = 'french';
 // const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
 // console.log(description);
 
-const markHeight = 1.88;
-const johnHeight = 1.76;
-const markWeight = 95;
-const johnWeight = 85;
+// const markHeight = 1.88;
+// const johnHeight = 1.76;
+// const markWeight = 95;
+// const johnWeight = 85;
 
-const markBMI = markWeight / markHeight ** 2;
-const johnBMI = johnWeight / johnHeight ** 2;
+// const markBMI = markWeight / markHeight ** 2;
+// const johnBMI = johnWeight / johnHeight ** 2;
 
-const markHigherBMI = markBMI > johnBMI;
+// const markHigherBMI = markBMI > johnBMI;
 
-if (markHigherBMI) {
-  console.log(`Mark's BMI is higher than John's!. Mark's
-  BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+// if (markHigherBMI) {
+//   console.log(`Mark's BMI is higher than John's!. Mark's
+//   BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+// } else {
+//   console.log(`Johns's BMI is higher than Marks's!. John's
+//   BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
+// }
+
+// console.log(markHigherBMI);
+
+// 4
+// '617'
+// 23
+// false
+// 1143
+
+const numNeighbours = +prompt('How many neighbour countries does your country have?');
+
+if (numNeighbours === 1) {
+  console.log('Only 1 border!');
+} else if (numNeighbours > 1) {
+  console.log('More than 1 border');
 } else {
-  console.log(`Johns's BMI is higher than Marks's!. John's
-  BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
+  console.log('No borders');
 }
-
-console.log(markHigherBMI);
