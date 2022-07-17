@@ -2,7 +2,7 @@ const country = "Portugal";
 const continent = "Europe";
 let population = 10;
 const isIsland = false;
-const language = 'french';
+// const language = 'french';
 
 // console.log(country);
 // console.log(continent);
@@ -63,19 +63,44 @@ const language = 'french';
 //   console.log('Portugal does not meet your criteria :(');
 // } 
 
-function scoreAverage (roundOne, roundTwo, roundThree) {
-  return (roundOne + roundTwo + roundThree) / 3;
+// function scoreAverage (roundOne, roundTwo, roundThree) {
+//   return (roundOne + roundTwo + roundThree) / 3;
+// }
+
+// dolphinAverage = scoreAverage(97, 112, 101);
+// koalaAverage = scoreAverage(109, 95, 123);
+
+// if (dolphinAverage > koalaAverage && dolphinAverage >= 100) {
+//   console.log('Doiplhins Wins!');
+// } else if (dolphinAverage < koalaAverage && koalaAverage >= 100) {
+//   console.log('Koalas Wins!');
+// } else if (dolphinAverage === koalaAverage && koalaAverage >= 100 && dolphinAverage >= 100) {
+//   console.log('Draw');
+// } else {
+//   console.log('No winner');
+// }
+
+const language = 'finnish';
+
+switch (language) {
+  case 'chinese':
+  case 'mandarin': 
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'english':
+    console.log('3rd place');
+    break;
+  case 'hindi':
+    console.log('Number 4');
+    break;  
+  case 'arabic':
+    console.log('5th most spoken language');
+    break;  
+  default:
+    console.log('Great language too :D');
 }
 
-dolphinAverage = scoreAverage(97, 112, 101);
-koalaAverage = scoreAverage(109, 95, 123);
 
-if (dolphinAverage > koalaAverage && dolphinAverage >= 100) {
-  console.log('Doiplhins Wins!');
-} else if (dolphinAverage < koalaAverage && koalaAverage >= 100) {
-  console.log('Koalas Wins!');
-} else if (dolphinAverage === koalaAverage && koalaAverage >= 100 && dolphinAverage >= 100) {
-  console.log('Draw');
-} else {
-  console.log('No winner');
-}
