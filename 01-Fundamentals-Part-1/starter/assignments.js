@@ -49,12 +49,33 @@ const language = 'french';
 // false
 // 1143
 
-const numNeighbours = +prompt('How many neighbour countries does your country have?');
+// const numNeighbours = +prompt('How many neighbour countries does your country have?');
 
-if (numNeighbours === 1) {
-  console.log('Only 1 border!');
-} else if (numNeighbours > 1) {
-  console.log('More than 1 border');
+// if (numNeighbours === 1) {
+//   console.log('Only 1 border!');
+// } else if (numNeighbours > 1) {
+//   console.log('More than 1 border');
+// } else {
+//   console.log('No borders');
+// }
+
+// if (language === 'english' && population < 50 && isIsland === false) {
+//   console.log('Portugal does not meet your criteria :(');
+// } 
+
+function scoreAverage (roundOne, roundTwo, roundThree) {
+  return (roundOne + roundTwo + roundThree) / 3;
+}
+
+dolphinAverage = scoreAverage(97, 112, 101);
+koalaAverage = scoreAverage(109, 95, 123);
+
+if (dolphinAverage > koalaAverage && dolphinAverage >= 100) {
+  console.log('Doiplhins Wins!');
+} else if (dolphinAverage < koalaAverage && koalaAverage >= 100) {
+  console.log('Koalas Wins!');
+} else if (dolphinAverage === koalaAverage && koalaAverage >= 100 && dolphinAverage >= 100) {
+  console.log('Draw');
 } else {
-  console.log('No borders');
+  console.log('No winner');
 }
