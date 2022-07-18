@@ -20,5 +20,10 @@ const percentageOfWorld2 = function (population) {
   return population / 7900 * 100;
 }
 
-const res = percentageOfWorld2(7900);
-console.log(res);
+const res1 = percentageOfWorld2(7900);
+console.log(res1);
+
+const percentageOfWorld3 = population => population / 7900 * 100;
+
+const res2 = percentageOfWorld3(400);
+console.log(res2);
