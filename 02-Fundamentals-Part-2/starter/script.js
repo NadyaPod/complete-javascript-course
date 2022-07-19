@@ -36,24 +36,33 @@ function percentageOfWorld1 (population) {
 
 // console.log(describePopulation('China', 1441));
 
-function calcAverage (scoreOne, scoreTwo, scoreThree) {
-  return (scoreOne + scoreTwo + scoreThree) / 3;
+// function calcAverage (scoreOne, scoreTwo, scoreThree) {
+//   return (scoreOne + scoreTwo + scoreThree) / 3;
+// }
+
+// const dolphinsAverage = calcAverage(85, 54, 41);
+// const koalasAverage = calcAverage(23, 34, 27);
+// console.log(dolphinsAverage);
+// console.log(koalasAverage);
+
+// function checkWinner (avgDolphins, avgKoalas) {
+//   if (avgDolphins >= avgKoalas * 2) {
+//     console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//   } else if (avgDolphins * 2 <= avgKoalas) {
+//     console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+//   } else {
+//     console.log(`None of them win`);
+//   }
+// }
+
+// checkWinner(dolphinsAverage, koalasAverage);
+
+const populations = [10, 45, 23, 56];
+
+if (populations.length >=4) {
+  console.log(populations);
 }
 
-const dolphinsAverage = calcAverage(85, 54, 41);
-const koalasAverage = calcAverage(23, 34, 27);
-console.log(dolphinsAverage);
-console.log(koalasAverage);
+const percentages = populations.map((item) => percentageOfWorld1(item));
 
-function checkWinner (avgDolphins, avgKoalas) {
-  if (avgDolphins >= avgKoalas * 2) {
-    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-  } else if (avgDolphins * 2 <= avgKoalas) {
-    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-  } else {
-    console.log(`None of them win`);
-  }
-}
-
-checkWinner(dolphinsAverage, koalasAverage);
-
+console.log(percentages);
