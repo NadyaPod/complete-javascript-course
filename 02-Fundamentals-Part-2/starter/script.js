@@ -28,10 +28,32 @@ function percentageOfWorld1 (population) {
 // const res2 = percentageOfWorld3(400);
 // console.log(res2);
 
-function describePopulation (country, population) {
-  const percentage = percentageOfWorld1(population);
-  return `${country} has ${population} million people, 
-  which is about ${percentage}% of the world`;
+// function describePopulation (country, population) {
+//   const percentage = percentageOfWorld1(population);
+//   return `${country} has ${population} million people, 
+//   which is about ${percentage}% of the world`;
+// }
+
+// console.log(describePopulation('China', 1441));
+
+function calcAverage (scoreOne, scoreTwo, scoreThree) {
+  return (scoreOne + scoreTwo + scoreThree) / 3;
 }
 
-console.log(describePopulation('China', 1441));
+const dolphinsAverage = calcAverage(85, 54, 41);
+const koalasAverage = calcAverage(23, 34, 27);
+console.log(dolphinsAverage);
+console.log(koalasAverage);
+
+function checkWinner (avgDolphins, avgKoalas) {
+  if (avgDolphins >= avgKoalas * 2) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgDolphins * 2 <= avgKoalas) {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log(`None of them win`);
+  }
+}
+
+checkWinner(dolphinsAverage, koalasAverage);
+
