@@ -67,14 +67,37 @@ function percentageOfWorld1 (population) {
 
 // console.log(percentages);
 
-const neighbours = ['spain', 'germany', 'switzerland', 'belgium'];
-neighbours.push('Utopia');
-neighbours.pop();
+// const neighbours = ['spain', 'germany', 'switzerland', 'belgium'];
+// neighbours.push('Utopia');
+// neighbours.pop();
 
-if (!neighbours.includes('germany')) {
-  console.log('Probably not a central European country :D');
+// if (!neighbours.includes('germany')) {
+//   console.log('Probably not a central European country :D');
+// }
+
+// neighbours[neighbours.indexOf('spain')] = 'finland';
+
+// console.log(neighbours);
+
+function calcTip (bill) {
+  if (50 <= bill <= 300) {
+    return bill * 0.15 
+  } else {
+    return bill * 0.2;
+  }
 }
 
-neighbours[neighbours.indexOf('spain')] = 'finland';
+const bills = [125, 555, 44];
 
-console.log(neighbours);
+const tips = [];
+bills.forEach((item) => tips.push(calcTip(item)));
+
+function total (bills, tips) {
+  let result = [];
+  for (let i = 0; i < bills.length; i++ ) {
+    result.push(bills[i] + tips[i]);
+  }
+  return result
+}
+
+console.log(total(bills, tips));
