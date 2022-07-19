@@ -57,12 +57,24 @@ function percentageOfWorld1 (population) {
 
 // checkWinner(dolphinsAverage, koalasAverage);
 
-const populations = [10, 45, 23, 56];
+// const populations = [10, 45, 23, 56];
 
-if (populations.length >=4) {
-  console.log(populations);
+// if (populations.length >=4) {
+//   console.log(populations);
+// }
+
+// const percentages = populations.map((item) => percentageOfWorld1(item));
+
+// console.log(percentages);
+
+const neighbours = ['spain', 'germany', 'switzerland', 'belgium'];
+neighbours.push('Utopia');
+neighbours.pop();
+
+if (!neighbours.includes('germany')) {
+  console.log('Probably not a central European country :D');
 }
 
-const percentages = populations.map((item) => percentageOfWorld1(item));
+neighbours[neighbours.indexOf('spain')] = 'finland';
 
-console.log(percentages);
+console.log(neighbours);
