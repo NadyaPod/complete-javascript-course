@@ -183,15 +183,49 @@ console.log(percentages);
 //   }
 // }
 
-const percentages3 = [];
-let i = 0;
+// const percentages3 = [];
+// let i = 0;
 
-while (i < populations.length) {
-  percentages3.push(percentageOfWorld1(populations[i]));
-  i++
+// while (i < populations.length) {
+//   percentages3.push(percentageOfWorld1(populations[i]));
+//   i++
+// }
+
+// console.log(percentages3);
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+function calcTip (bill) {
+    const tipValue = (50 <= bill && bill <= 300) ? bill * 0.15 : bill * 0.2;
+    return tipValue;
+  } 
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(bills[i] + tip);
+}
+  
+console.log(tips);
+console.log(totals);
+
+function calcAverage (arr) {
+  let acc = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    acc+=arr[i];
+  }
+  
+  return acc / arr.length;
 }
 
-console.log(percentages3);
+console.log(calcAverage(totals));
+
+
+
 
 
 
