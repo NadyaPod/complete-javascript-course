@@ -57,15 +57,15 @@ function percentageOfWorld1 (population) {
 
 // checkWinner(dolphinsAverage, koalasAverage);
 
-// const populations = [10, 45, 23, 56];
+const populations = [10, 45, 23, 56];
 
-// if (populations.length >=4) {
-//   console.log(populations);
-// }
+if (populations.length >=4) {
+  console.log(populations);
+}
 
-// const percentages = populations.map((item) => percentageOfWorld1(item));
+const percentages = populations.map((item) => percentageOfWorld1(item));
 
-// console.log(percentages);
+console.log(percentages);
 
 // const neighbours = ['spain', 'germany', 'switzerland', 'belgium'];
 // neighbours.push('Utopia');
@@ -166,12 +166,22 @@ function percentageOfWorld1 (population) {
 //   console.log (`Voter number ${i} is currently voting`);
 // }
 
-const populations = [10, 45, 23, 56];
+// const percentages2 = [];
 
-const percentages2 = [];
+// for (let i = 0; i < populations.length; i++ ) {
+//   percentages2.push(percentageOfWorld1(populations[i]));
+// }
 
-for (let i = 0; i < populations.length; i++ ) {
-  percentages2.push(percentageOfWorld1(populations[i]));
+// console.log(percentages2);
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 
+'Russia']];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let j = 0; j < listOfNeighbours[i].length; j++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][j]}`)
+  }
 }
 
-console.log(percentages2);
+
+
