@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 // function describeCountry (country, population, capitalCity) {
 //   return `${country} has ${population} million people and its capital city is ${capitalCity}`;
@@ -10,9 +10,9 @@
 
 // console.log(spain, finland, latvia);
 
-function percentageOfWorld1 (population) {
-  return population / 7900 * 100;
-}
+// function percentageOfWorld1(population) {
+//   return (population / 7900) * 100;
+// }
 
 // console.log(percentageOfWorld1(100));
 
@@ -30,7 +30,7 @@ function percentageOfWorld1 (population) {
 
 // function describePopulation (country, population) {
 //   const percentage = percentageOfWorld1(population);
-//   return `${country} has ${population} million people, 
+//   return `${country} has ${population} million people,
 //   which is about ${percentage}% of the world`;
 // }
 
@@ -57,15 +57,15 @@ function percentageOfWorld1 (population) {
 
 // checkWinner(dolphinsAverage, koalasAverage);
 
-const populations = [10, 45, 23, 56];
+// const populations = [10, 45, 23, 56];
 
-if (populations.length >=4) {
-  console.log(populations);
-}
+// if (populations.length >= 4) {
+//   console.log(populations);
+// }
 
-const percentages = populations.map((item) => percentageOfWorld1(item));
+// const percentages = populations.map((item) => percentageOfWorld1(item));
 
-console.log(percentages);
+// console.log(percentages);
 
 // const neighbours = ['spain', 'germany', 'switzerland', 'belgium'];
 // neighbours.push('Utopia');
@@ -81,7 +81,7 @@ console.log(percentages);
 
 // function calcTip (bill) {
 //   if (50 <= bill <= 300) {
-//     return bill * 0.15 
+//     return bill * 0.15
 //   } else {
 //     return bill * 0.2;
 //   }
@@ -109,7 +109,7 @@ console.log(percentages);
 //   population: 70,
 //   neighbours: ['Germany', 'Switzerland', 'Check Republic'],
 //   describe: function () {
-//     return `${this.country} has ${this.population} miilion ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`  
+//     return `${this.country} has ${this.population} miilion ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`
 //   },
 //   checkIsland: function () {
 //     this.neighbours.length === 0 ? this.isIsland = true : this.isIsland = false;
@@ -127,7 +127,6 @@ console.log(percentages);
 // jonas.friends.length;
 // jonas.friends[0];
 
-
 // myCountry.checkIsland();
 // console.log(myCountry)
 
@@ -137,7 +136,7 @@ console.log(percentages);
 //   height: 1.69,
 //   calcBMI: function () {
 //     this.BMI = this.mass / this.height ** 2;
-//     return this.BMI; 
+//     return this.BMI;
 //   }
 // }
 
@@ -147,7 +146,7 @@ console.log(percentages);
 //   height: 1.95,
 //   calcBMI: function () {
 //     this.BMI = this.mass / this.height ** 2;
-//     return this.BMI; 
+//     return this.BMI;
 //   }
 // }
 
@@ -174,7 +173,7 @@ console.log(percentages);
 
 // console.log(percentages2);
 
-// const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 
+// const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden',
 // 'Russia']];
 
 // for (let i = 0; i < listOfNeighbours.length; i++) {
@@ -193,41 +192,47 @@ console.log(percentages);
 
 // console.log(percentages3);
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
-const tips = [];
-const totals = [];
+// const tips = [];
+// const totals = [];
 
-function calcTip (bill) {
-    const tipValue = (50 <= bill && bill <= 300) ? bill * 0.15 : bill * 0.2;
-    return tipValue;
-  } 
+// function calcTip(bill) {
+//   const tipValue = 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
+//   return tipValue;
+// }
 
-for (let i = 0; i < bills.length; i++) {
-  const tip = calcTip(bills[i]);
-  tips.push(tip);
-  totals.push(bills[i] + tip);
-}
-  
-console.log(tips);
-console.log(totals);
+// for (let i = 0; i < bills.length; i++) {
+//   const tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   totals.push(bills[i] + tip);
+// }
 
-function calcAverage (arr) {
-  let acc = 0;
+// console.log(tips);
+// console.log(totals);
 
-  for (let i = 0; i < arr.length; i++) {
-    acc+=arr[i];
-  }
-  
-  return acc / arr.length;
-}
+// function calcAverage(arr) {
+//   let acc = 0;
 
-console.log(calcAverage(totals));
+//   for (let i = 0; i < arr.length; i++) {
+//     acc += arr[i];
+//   }
 
+//   return acc / arr.length;
+// }
 
+// console.log(calcAverage(totals));
 
+// const x = 23;
 
+const forecast1 = [17, 21, 23];
+const forecast2 = [12, 5, -5, 0, 4];
 
+const printForecast = (arr) => {
+  const result = arr.map(
+    (item) => `${item}ºC in ${arr.indexOf(item) + 1} days`
+  );
+  return result.join("...");
+};
 
-
-
+console.log(printForecast(forecast2));
