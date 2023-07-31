@@ -76,10 +76,40 @@ const allPlayers = [...players1, ...players2];
 const players1Final = [...players1, 'Thiago', 'Countiho', 'Perisic'];
 const {team1, x: draw, team2} = game.odds;
 
-function printGoals (...playersNames) {
-  playersNames.forEach(man => console.log(man));
+// function printGoals (...playersNames) {
+//   playersNames.forEach(man => console.log(man));
+// }
+
+// printGoals(...game.scored);
+
+// team1 < team2 && console.log('Team 1 is more likely to win');
+
+console.log(game.scored);
+
+for (const [i, gamer] of game.scored.entries()) {
+  console.log(`Goal: ${i + 1}: ${gamer}`);
+}
+let sum = 0;
+
+for (let [, score] of Object.entries(game.odds)) {
+  sum += score;
 }
 
-printGoals(...game.scored);
+console.log(sum / Object.entries(game.odds).length);
 
-team1 < team2 && console.log('Team 1 is more likely to win');
+for (let [type, score] of Object.entries(game.odds)) {
+  type === 'x' ?
+  console.log(`Odd of ${type} draw: ${score}`)
+  : console.log(`Odd of ${type} ${game[type]}: ${score}`);
+}
+
+const scorers = {};
+
+for (let name of game.scored.values()) {
+  if (Object.hasOwn(scorers, name)) {
+    scorers[name] += 1;
+  } else {
+    scorers[name] = 1;
+  }
+}
+console.log(scorers);
