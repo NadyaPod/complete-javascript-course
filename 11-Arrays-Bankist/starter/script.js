@@ -90,6 +90,29 @@ const dispayMovements = function(movements) {
 
 dispayMovements(movements)
 
+const user = 'Steven Thomas Williams';
+const nameToAbbr = (accs) => 
+  accs.forEach((acc) => {
+    acc.userName = acc.owner.toLowerCase().split(' ').map(word => word[0]).join('')
+  })
+
+nameToAbbr(accounts)
+console.log(accounts);
+
+ 
+const eurToUsd = 1.1;
+const eurConverted = movements.map(move => move * eurToUsd);
+console.log(eurConverted);
+
+const eurConverted_1 = [];
+for (let move of movements) {
+  eurConverted_1.push(move * eurToUsd)
+}
+
+console.log('eurCon_1', eurConverted_1);
+
+
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
