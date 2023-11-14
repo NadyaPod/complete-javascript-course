@@ -88,16 +88,26 @@ const dispayMovements = function(movements) {
   })
 }
 
-dispayMovements(movements)
+dispayMovements(account1.movements);
+const calcPrintBalance = (balanceData) => {
+  const balance = balanceData.reduce((acc, data) => acc + data, 0);
+  labelBalance.textContent = `${balance} EUR`
+}
 
-const user = 'Steven Thomas Williams';
+console.log('accbalance', calcPrintBalance(account2.movements));
+
+const withDrawals = movements.filter(mov => mov < 0);
+console.log('withDrawals', withDrawals);
+
+const sum = movements.reduce((acc, mov) => acc + mov, 0)
+console.log('reduce sum', sum);
+
 const nameToAbbr = (accs) => 
   accs.forEach((acc) => {
     acc.userName = acc.owner.toLowerCase().split(' ').map(word => word[0]).join('')
   })
 
 nameToAbbr(accounts)
-console.log(accounts);
 
  
 const eurToUsd = 1.1;
@@ -111,6 +121,11 @@ for (let move of movements) {
 
 console.log('eurCon_1', eurConverted_1);
 
+const maxValue = (arr) => {
+  return arr.reduce((acc, value) => acc = acc >= value ? acc : value, arr[0])
+}
+
+console.log(maxValue(movements));
 
 
 ///////////////////////////////////////
